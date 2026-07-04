@@ -1,9 +1,10 @@
 # Nombre del Sistema
 
 ## Integrantes
-- Nombre del estudiante 1
-- Nombre del estudiante 2
-- Nombre del estudiante 3
+- Josmell Shimporintsi Dominguez
+- Jhonatan 
+- Miguel Angel
+- Juan Carlos Laura Farfan 
 
 ## Descripción
 Sistema web desarrollado en Django para gestionar procesos relacionados con el tema asignado.
