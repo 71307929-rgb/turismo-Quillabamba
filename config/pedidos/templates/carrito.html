@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 class="text-center text-warning mb-4">
+    Carrito 🛒
+</h2>
+
+<table class="table table-striped table-hover shadow">
+
+    <thead class="table-dark">
+        <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {% for key, value in request.session.carrito.items %}
+
+        <tr>
+            <td>{{ value.nombre }}</td>
+
+            <td>
+                <span class="badge bg-primary">
+                    {{ value.cantidad }}
+                </span>
+            </td>
+
+            <td>
+
+                <a href="{% url 'agregar' key %}"
+                class="btn btn-success btn-sm">
+                    +
+                </a>
+
+                <a href="{% url 'restar' key %}"
+                class="btn btn-warning btn-sm">
+                    -
+                </a>
+
+                <a href="{% url 'eliminar' key %}"
+                class="btn btn-danger btn-sm">
+                    Eliminar
+                </a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+<div class="text-center mt-4">
+
+    <a href="{% url 'limpiar' %}"
+    class="btn btn-danger">
+        🗑 Vaciar carrito
+    </a>
+
+    <a href="{% url 'confirmar_pedido' %}"
+    class="btn btn-success">
+        ✅ Confirmar pedido
+    </a>
+
+</div>
+
+{% endblock %}

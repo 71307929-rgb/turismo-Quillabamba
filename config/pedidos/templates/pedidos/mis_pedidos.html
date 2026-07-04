@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 class="text-center text-success mb-4">
+    📦 Mis Pedidos
+</h2>
+
+<div class="row">
+
+{% for pedido in pedidos %}
+
+<div class="col-md-6 mb-4">
+
+    <div class="card shadow">
+
+        <div class="card-body">
+
+            <h5>
+                Pedido #{{ pedido.id }}
+            </h5>
+
+            <p>
+                Total:
+                <strong class="text-success">
+                    S/ {{ pedido.total }}
+                </strong>
+            </p>
+
+            <a href="{% url 'detalle_pedido' pedido.id %}"
+            class="btn btn-primary">
+                Ver detalle
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

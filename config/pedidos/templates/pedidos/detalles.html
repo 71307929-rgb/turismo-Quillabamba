@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Detalle del Pedido</h2>
+
+<ul class="list-group mt-3 mb-4">
+    {% for d in detalles %}
+    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+        <span>{{ d.producto.nombre }}</span>
+        <span class="badge bg-secondary rounded-pill">x{{ d.cantidad }}</span>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="/mis-pedidos/" class="btn btn-sm btn-outline-secondary">
+    Volver a mis pedidos
+</a>
+
+{% endblock %}
