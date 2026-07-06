@@ -1,10 +1,10 @@
 # Nombre del Sistema
 
 ## Integrantes
-- Josmell Shimporintsi Dominguez
-- Jhonatan 
-- Miguel Angel
-- Juan Carlos Laura Farfan 
+1. Josmell Shimporintsi Dominguez 
+2. Jhonatan 
+3. Miguel Angel
+4. Juan Carlos Laura Farfan 
 
 ## Descripción
 Sistema web desarrollado en Django para gestionar procesos relacionados con el tema asignado.
